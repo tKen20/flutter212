@@ -28,12 +28,27 @@ class _UiProfileState extends State<UiProfile> {
                   fit: BoxFit.cover,
                   height: height / 2.5,
                 ),
-                const Positioned(
+                Positioned(
                   bottom: -60,
-                  child: CircleAvatar(
-                    radius: 60,
-                    backgroundImage: NetworkImage(
-                        "https://www.w3schools.com/w3images/avatar6.png"),
+                  child: GestureDetector(
+                    onTap: () {
+                      // hien thi show bottom
+                      showModalBottomSheet(
+                        context: context,
+                        builder: (context) {
+                          return Container(
+                            height: 300,
+                            color: Colors.amber,
+                          );
+                        },
+                      );
+                      print('object');
+                    },
+                    child: CircleAvatar(
+                      radius: 60,
+                      backgroundImage: NetworkImage(
+                          "https://www.w3schools.com/w3images/avatar6.png"),
+                    ),
                   ),
                 ),
               ],
