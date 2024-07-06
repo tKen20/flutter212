@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animation_text/animation_text.dart';
 import 'package:flutter_animation_text/screen/stepeer_flutter.dart';
+import 'package:flutter_animation_text/screen/time_picker_flutter.dart';
 import 'package:flutter_animation_text/screen/ui_profile.dart';
 
 void main() {
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
         //colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: SteeperFlutter(),
+      home: TimePickerFlutter(),
     );
   }
 }
