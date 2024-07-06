@@ -48,7 +48,7 @@ class _AnimationTextState extends State<AnimationText> {
                     ),
                     child: AnimatedTextKit(
                       animatedTexts: [
-                        FadeAnimatedText('AWESOME'),
+                        FadeAnimatedText('AWESOE'),
                         FadeAnimatedText('OPTIMISTIC'),
                         FadeAnimatedText('DIFFERENT'),
                       ],
