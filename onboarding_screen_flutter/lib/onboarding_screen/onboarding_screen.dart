@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:onboarding_screen_flutter/home_screens.dart';
+import 'package:onboarding_screen_flutter/onboarding_screen/home_screens.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class OnboardingScreen extends StatelessWidget {

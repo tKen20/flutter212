@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:onboarding_screen_flutter/home_screens.dart';
-import 'package:onboarding_screen_flutter/onboarding_screen.dart';
+import 'package:onboarding_screen_flutter/lotties_plash_screen/lotties_screen.dart';
+import 'package:onboarding_screen_flutter/onboarding_screen/home_screens.dart';
+import 'package:onboarding_screen_flutter/onboarding_screen/onboarding_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 bool isShow = true;
@@ -24,7 +25,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: isShow ? const OnboardingScreen() : const HomeScreens(),
+
+      // using OnBoarding
+      // home: isShow ? const OnboardingScreen() : const HomeScreens(),
+
+      home: LottiesScreen(),
     );
   }
 }
