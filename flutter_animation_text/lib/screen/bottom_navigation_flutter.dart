@@ -24,10 +24,10 @@ class _BottomNavigationFlutterState extends State<BottomNavigationFlutter> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: const Text("Bottom Navigation Flutter"),
-      ),
+      // appBar: AppBar(
+      //   centerTitle: true,
+      //   title: const Text("Bottom Navigation Flutter"),
+      // ),
       body: pages[currentIndex],
       bottomNavigationBar: Container(
         margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),

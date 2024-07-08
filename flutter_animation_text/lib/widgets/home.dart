@@ -97,10 +97,96 @@ class _HomeState extends State<Home> {
     Navigator.of(context).pop();
   }
 
+  bool isSearchClicked = false;
+  final TextEditingController textEditingController = TextEditingController();
+
+  String searchtext = '';
+  List<String> items = [
+    'hai',
+    'hoang',
+    'quyet',
+    'truong',
+    'luan',
+    'chau anh',
+    'abc',
+  ];
+
+  List<String> filterItem = [];
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    filterItem = List.from(items);
+  }
+
+// phuong thuc cap nhat lai gia tri cua searchtext
+  void onSearchChange(String value) {
+    setState(() {
+      searchtext = value;
+      myfilterItems();
+    });
+  }
+
+  //
+  void myfilterItems() {
+    if (searchtext.isEmpty) {
+      filterItem = List.from(items);
+    } else {
+      filterItem = items
+          .where(
+            (e) => e.toLowerCase().contains(searchtext.toLowerCase()),
+          )
+          .toList();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white54,
+      backgroundColor: Colors.white60,
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        centerTitle: true,
+        title: isSearchClicked
+            ? Container(
+                height: 40,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: TextField(
+                  controller: textEditingController,
+                  onChanged: (value) {},
+                  decoration: const InputDecoration(
+                      border: InputBorder.none,
+                      hintText: "Search...",
+                      hintStyle: TextStyle(
+                        fontSize: 18,
+                        color: Colors.black,
+                      ),
+                      contentPadding: EdgeInsets.fromLTRB(16, 20, 16, 7)),
+                ),
+              )
+            : const Text('Search Bar'),
+        actions: [
+          IconButton(
+            onPressed: () {
+              setState(() {
+                isSearchClicked = !isSearchClicked;
+                if (!isSearchClicked) {
+                  textEditingController.clear();
+                  myfilterItems();
+                }
+              });
+            },
+            icon: Icon(
+              isSearchClicked ? Icons.close : Icons.search,
+              color: Colors.white,
+            ),
+          ),
+        ],
+      ),
       body: SafeArea(
         child: Center(
           child: Stack(
