@@ -1,0 +1,1 @@
+ D:\\flutter212\\flutter_animation_text\\.dart_tool\\flutter_build\\0f312d09527af5919119592a47df37e9\\native_assets.yaml: 
