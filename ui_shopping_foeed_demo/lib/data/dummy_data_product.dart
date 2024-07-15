@@ -10,7 +10,8 @@ List<ProductModel> productData = [
     rate: 4.5,
     kcal: '100',
     cookingTime: '20min',
-    desc: "assets/images/banh-my.jpg",
+    desc:
+        "A Royal burger is a patty of ground beef grilled and placed between two halves of a bun. Slices of raw onion, lettuce, bacon, mayonnaise, and other ingredients add flavor. Burgers are considered an American food but are popular around the world.",
   ),
   ProductModel(
       id: '2',
